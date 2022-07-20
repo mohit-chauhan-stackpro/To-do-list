@@ -2,3 +2,4 @@
 <label>Enter Your Task!!</label>
 <input type="text" [(ngModel)]="task" />
 <button style="cursor: pointer" (click)="addTask(task)">Add Task</button>
+<app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>
