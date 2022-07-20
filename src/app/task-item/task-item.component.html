@@ -1,4 +1,9 @@
 <p [ngStyle]="{ backgroundColor: !taskStatus ? 'lightyellow' : 'lightgreen' }">
   {{ task }}
 </p>
-<button *ngIf="!taskStatus" (click)="markAsDone()">Mark As Completed!!</button>
+<button *ngIf="!taskStatus" (click)="markAsDone()" class="completeButton">
+  Mark As Completed!!
+</button>
+<button *ngIf="!taskStatus" (click)="deleteTask(index)" class="deleteButton">
+  Delete Task
+</button>

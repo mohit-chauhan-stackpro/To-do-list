@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-task-item',
@@ -7,6 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task
+  @Input() index
+  @Output() deleteIndex=new EventEmitter<number>();
+
   taskStatus:boolean=false;
 
   constructor() { }
@@ -15,6 +18,9 @@ export class TaskItemComponent implements OnInit {
   }
   markAsDone(){
     this.taskStatus=!this.taskStatus
+  }
+  deleteTask(index:number){
+    this.deleteIndex.emit(index)
   }
 
 }

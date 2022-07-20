@@ -13,5 +13,8 @@ export class AppComponent {
   addTask(task:string){
     this.tasks.push(task);
   }
+  deleteTask(event:number){
+     this.tasks.splice(event, 1);
+  }
 
 }
