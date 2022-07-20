@@ -7,10 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task
+  taskStatus:boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  markAsDone(){
+    this.taskStatus=!this.taskStatus
   }
 
 }
