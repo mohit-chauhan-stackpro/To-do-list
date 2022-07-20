@@ -1,3 +1,4 @@
 <h1>TO DO LIST!!</h1>
-<input type="text" />
-<button style="cursor: pointer">Add Task</button>
+<label>Enter Your Task!!</label>
+<input type="text" [(ngModel)]="task" />
+<button style="cursor: pointer" (click)="addTask(task)">Add Task</button>

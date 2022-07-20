@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'To-do-list';
-
+  tasks:string[]=[];
   task:string;
 
+  addTask(task:string){
+    this.tasks.push(task);
+  }
 
 }
